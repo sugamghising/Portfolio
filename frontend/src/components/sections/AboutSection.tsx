@@ -1,17 +1,11 @@
 import SectionTitle from "../common/SectionTitle";
-import {
-  bio,
-  skills,
-  education,
-  certifications,
-  softSkills,
-} from "@/data/about";
+import { bio, skills, education, softSkills } from "@/data/about";
 import SkillBar from "../about/SkillBar";
 import EducationCard from "../about/EducationCard";
 // import CertificationCard from "../about/CertificationCard";
 import { Card, CardContent } from "../ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
-import { User, GraduationCap, Award, Code, Heart } from "lucide-react";
+import { User, GraduationCap, Code, Heart } from "lucide-react";
 
 const AboutSection = () => {
   const skillCategories = {
@@ -45,7 +39,6 @@ const AboutSection = () => {
                     {bio.professional}
                   </p>
                   <p className="text-base leading-relaxed">{bio.background}</p>
-                  <p className="text-base leading-relaxed">{bio.interests}</p>
                 </div>
               </div>
             </div>
