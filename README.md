@@ -25,10 +25,3 @@ Build for production
 cd frontend
 npm run build
 ```
-
-Notes
-
-- The project uses Tailwind CSS and `@vitejs/plugin-react`.
-- Add a backend for contact form handling if you want to replace the current `mailto:` flow.
-
-If you'd like, I can add an overall README section documenting the roadmap items from `FUTURE_IMPROVEMENTS.md` or add a workspace-level `package.json` to manage scripts centrally.
