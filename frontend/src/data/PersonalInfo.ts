@@ -7,5 +7,5 @@ export const PersonalInfo: PersonalInfoType = {
         "I build fast, accessible, scalable applications with strong real-time features.",
     email: "sugamghising04@example.com",
     github: "https://github.com/sugamghising",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/sugamghising",
 };

@@ -74,11 +74,11 @@ const AboutSection = () => {
         </div>
 
         <Tabs defaultValue="frontend" className="w-full">
-          <TabsList className="grid w-full grid-cols-4 mb-6">
+          <TabsList className="grid w-full grid-cols-3 mb-6">
             <TabsTrigger value="frontend">Frontend</TabsTrigger>
             <TabsTrigger value="backend">Backend</TabsTrigger>
             <TabsTrigger value="database">Database</TabsTrigger>
-            <TabsTrigger value="tools">Tools</TabsTrigger>
+            {/* <TabsTrigger value="tools">Tools</TabsTrigger> */}
           </TabsList>
 
           <TabsContent value="frontend" className="space-y-4">
