@@ -6,7 +6,7 @@ export const projects: Project[] = [
         title: "Real-time Leaderboard",
         description: "Real-time updates using WebSockets, Redis session store.",
         tech: ["React", "Node", "Socket.IO", "Redis"],
-        repo: "https://github.com/sugamghising/leaderboard",
+        repo: "https://github.com/sugamghising/Real-time-Leaderboard",
         demo: "",
     },
     {
@@ -15,5 +15,6 @@ export const projects: Project[] = [
         description: "Seat selection, Stripe integration, and admin dashboard.",
         tech: ["React", "TypeScript", "Prisma", "Stripe"],
         repo: "",
+        demo:""
     },
 ];

@@ -1,9 +1,16 @@
-import React from 'react'
-
-const SectionTitle = ({children} : {children :React.ReactNode}) => {
-  return (
-    <h2 className="text-3xl font-semibold mb-6">{children}</h2>
-  )
+interface SectionTitleProps {
+  children: React.ReactNode;
+  className?: string;
 }
 
-export default SectionTitle
+const SectionTitle = ({ children, className = "" }: SectionTitleProps) => {
+  return (
+    <div className={`mb-6 text-left ${className}`}>
+      <h2 className="text-3xl md:text-4xl font-semibold text-left">
+        {children}
+      </h2>
+    </div>
+  );
+};
+
+export default SectionTitle;

@@ -25,6 +25,16 @@ const Header = () => {
         </a>
         <div className="flex gap-4 items-center">
           <a 
+            href="#about" 
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('about');
+            }}
+            className="text-sm hover:text-primary transition-colors font-medium"
+          >
+            About
+          </a>
+          <a 
             href="#projects" 
             onClick={(e) => {
               e.preventDefault();
