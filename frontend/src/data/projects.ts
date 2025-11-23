@@ -1,4 +1,6 @@
-export const projects = [
+import type { Project } from "@/types";
+
+export const projects: Project[] = [
     {
         id: "1",
         title: "Real-time Leaderboard",
@@ -13,6 +15,5 @@ export const projects = [
         description: "Seat selection, Stripe integration, and admin dashboard.",
         tech: ["React", "TypeScript", "Prisma", "Stripe"],
         repo: "",
-        },
-
-]
+    },
+];

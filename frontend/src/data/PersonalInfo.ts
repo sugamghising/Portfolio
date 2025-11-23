@@ -1,5 +1,6 @@
-export const PersonalInfo =
-{
+import type { PersonalInfo as PersonalInfoType } from "@/types";
+
+export const PersonalInfo: PersonalInfoType = {
     name: "Sugam Ghising",
     role: "Full-stack Developer",
     description:
@@ -7,4 +8,4 @@ export const PersonalInfo =
     email: "sugamghising04@example.com",
     github: "https://github.com/sugamghising",
     linkedin: "",
-}
+};
