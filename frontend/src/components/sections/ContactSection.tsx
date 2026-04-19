@@ -4,7 +4,7 @@ import { PersonalInfo } from "@/data/PersonalInfo";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
-import { Github, Mail, MessageCircle } from "lucide-react";
+import { Github, Globe, Mail, MessageCircle, Phone } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID as
@@ -142,6 +142,32 @@ const ContactSection = () => {
               </div>
               <span className="font-medium">{PersonalInfo.email}</span>
             </a>
+
+            {PersonalInfo.phone && (
+              <a
+                href={`tel:${PersonalInfo.phone}`}
+                className="flex items-center gap-3 text-foreground hover:text-primary transition-colors group"
+              >
+                <div className="p-2 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                  <Phone className="w-5 h-5 text-primary" />
+                </div>
+                <span className="font-medium">{PersonalInfo.phone}</span>
+              </a>
+            )}
+
+            {PersonalInfo.website && (
+              <a
+                href={PersonalInfo.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-foreground hover:text-primary transition-colors group"
+              >
+                <div className="p-2 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                  <Globe className="w-5 h-5 text-primary" />
+                </div>
+                <span className="font-medium">{PersonalInfo.website}</span>
+              </a>
+            )}
 
             {PersonalInfo.linkedin && (
               <a

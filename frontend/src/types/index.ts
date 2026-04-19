@@ -12,6 +12,9 @@ export interface PersonalInfo {
   role: string;
   description: string;
   email: string;
+  phone?: string;
+  website?: string;
+  location?: string;
   github: string;
   linkedin?: string;
 }

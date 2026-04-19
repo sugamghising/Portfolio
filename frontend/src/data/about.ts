@@ -1,58 +1,51 @@
 import type { Skill, Education, Certification, WorkExperience, SoftSkill } from "@/types";
 
 export const bio = {
-  professional: `I'm a passionate Full-stack Developer with expertise in building modern, scalable web applications. I specialize in creating seamless user experiences with robust backend systems, real-time features, and clean, maintainable code.`,
-  background: `With a strong foundation in both frontend and backend technologies, I enjoy solving complex problems and turning ideas into reality. I'm always eager to learn new technologies and best practices to deliver high-quality solutions.`,
-  // interests: `When I'm not coding, I enjoy contributing to open-source projects, reading tech blogs, and exploring new frameworks and tools. I believe in writing clean, efficient code and following best practices.`
+  professional: `Backend-focused developer with hands-on experience building and deploying RESTful APIs, microservices, and full-stack web applications.`,
+  background: `Proficient in Node.js, Express, TypeScript, and PostgreSQL, with practical exposure to React and React Native. Experienced in Agile delivery, database optimization, and writing clean, maintainable code for production systems.`,
 };
 
 export const skills: Skill[] = [
   // Frontend
-  { name: "React", proficiency: 70, category: "frontend" },
-  { name: "TypeScript", proficiency: 85, category: "frontend" },
-  { name: "JavaScript", proficiency: 90, category: "frontend" },
-  { name: "HTML/CSS", proficiency: 95, category: "frontend" },
-  { name: "Tailwind CSS", proficiency: 80, category: "frontend" },
-  // { name: "Next.js", proficiency: 80, category: "frontend" },
+  { name: "React.js", proficiency: 80, category: "frontend" },
+  { name: "React Native", proficiency: 70, category: "frontend" },
+  { name: "Tailwind CSS", proficiency: 82, category: "frontend" },
+  { name: "HTML5/CSS3", proficiency: 88, category: "frontend" },
 
   // Backend
-  { name: "Node.js", proficiency: 90, category: "backend" },
-  { name: "Express", proficiency: 85, category: "backend" },
-  { name: "REST APIs", proficiency: 90, category: "backend" },
-  // { name: "GraphQL", proficiency: 75, category: "backend" },
-  { name: "Socket.IO", proficiency: 75, category: "backend" },
+  { name: "Node.js", proficiency: 92, category: "backend" },
+  { name: "Express.js", proficiency: 90, category: "backend" },
+  { name: "TypeScript", proficiency: 90, category: "backend" },
+  { name: "REST API Design", proficiency: 92, category: "backend" },
+  { name: "Prisma ORM", proficiency: 86, category: "backend" },
+  { name: "Zod", proficiency: 80, category: "backend" },
+  { name: "JWT Auth", proficiency: 86, category: "backend" },
+  { name: "Socket.io", proficiency: 82, category: "backend" },
+  { name: "WebSockets", proficiency: 80, category: "backend" },
 
   // Database
-  { name: "PostgreSQL", proficiency: 80, category: "database" },
-  { name: "MongoDB", proficiency: 85, category: "database" },
-  { name: "Redis", proficiency: 70, category: "database" },
-  { name: "Prisma", proficiency: 85, category: "database" },
+  { name: "PostgreSQL", proficiency: 88, category: "database" },
+  { name: "MySQL", proficiency: 84, category: "database" },
+  { name: "MongoDB", proficiency: 80, category: "database" },
+  { name: "Redis", proficiency: 78, category: "database" },
 
-  // // Tools
-  // { name: "Git", proficiency: 90, category: "tools" },
-  // { name: "Docker", proficiency: 75, category: "tools" },
-  // { name: "AWS", proficiency: 70, category: "tools" },
-  // { name: "CI/CD", proficiency: 75, category: "tools" },
+  // Tools
+  { name: "Git/GitHub", proficiency: 90, category: "tools" },
+  { name: "Docker", proficiency: 76, category: "tools" },
+  { name: "Postman", proficiency: 86, category: "tools" },
+  { name: "Swagger/OpenAPI", proficiency: 84, category: "tools" },
+  { name: "Linux", proficiency: 76, category: "tools" },
 ];
 
 export const education: Education[] = [
   {
     id: "edu1",
-    degree: "Bachelor of Science in Computer Science and Information Technology.",
-    institution: "Tribhuwan University ",
-    period: "2022 - present",
-    description: "Focused on software engineering, algorithms, and web development",
-    gpa: "?/4.0"
+    degree: "Bachelor in Computer Science and Information Technology (BSc. CSIT)",
+    institution: "Tribhuvan University, Kathmandu",
+    period: "2022 - 2025",
+    description:
+      "Relevant coursework: Data Structures and Algorithms, Web Development, Operating Systems, OOP, and DBMS.",
   },
-  {
-    id: "edu1",
-    degree: "Secondary Level (12 Grade)",
-    institution: "Viswa Niketan School ",
-    period: "2019 - 2021",
-    description: "",
-    gpa: "3.15/4.0"
-  },
-
 ];
 
 export const certifications: Certification[] = [
@@ -79,57 +72,36 @@ export const certifications: Certification[] = [
 ];
 
 export const workExperience: WorkExperience[] = [
-  // {
-  //   id: "exp1",
-  //   title: "Senior Full-Stack Developer",
-  //   company: "Tech Company Inc.",
-  //   period: "2023 - Present",
-  //   location: "Remote",
-  //   description: [
-  //     "Developed and maintained scalable web applications using React and Node.js",
-  //     "Led a team of 3 developers in building real-time features with WebSockets",
-  //     "Improved application performance by 40% through optimization techniques",
-  //     "Implemented CI/CD pipelines reducing deployment time by 60%"
-  //   ],
-  //   technologies: ["React", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"]
-  // },
-  // {
-  //   id: "exp2",
-  //   title: "Full-Stack Developer",
-  //   company: "StartupXYZ",
-  //   period: "2021 - 2023",
-  //   location: "San Francisco, CA",
-  //   description: [
-  //     "Built responsive web applications from scratch using modern frameworks",
-  //     "Collaborated with designers to implement pixel-perfect UI components",
-  //     "Integrated third-party APIs and payment gateways (Stripe)",
-  //     "Mentored junior developers and conducted code reviews"
-  //   ],
-  //   technologies: ["React", "TypeScript", "Express", "MongoDB", "Stripe"]
-  // },
-  // {
-  //   id: "exp3",
-  //   title: "Junior Web Developer",
-  //   company: "Digital Agency",
-  //   period: "2020 - 2021",
-  //   location: "New York, NY",
-  //   description: [
-  //     "Developed client websites using HTML, CSS, and JavaScript",
-  //     "Assisted in migrating legacy applications to modern frameworks",
-  //     "Participated in agile development processes"
-  //   ],
-  //   technologies: ["JavaScript", "React", "Node.js", "MySQL"]
-  // }
+  {
+    id: "exp1",
+    title: "Backend Developer Intern",
+    company: "Geek Tech Solutions",
+    period: "Dec 2025 - Present",
+    description: [
+      "Improved POS API response latency by about 25 percent by restructuring backend data handling and removing redundant MySQL queries.",
+      "Designed and maintained RESTful endpoints consumed by 10+ daily active users with reliable data delivery and robust error handling.",
+      "Contributed backend logic for a cross-platform POS system used by React and React Native clients with consistent TypeScript behavior.",
+      "Participated in Agile sprints, delivered features on schedule, and maintained code quality through peer reviews and Git/GitHub workflows.",
+    ],
+    technologies: [
+      "Node.js",
+      "Express.js",
+      "TypeScript",
+      "MySQL",
+      "React",
+      "React Native",
+      "Git",
+      "GitHub",
+    ],
+  },
 ];
 
 export const softSkills: SoftSkill[] = [
-  { name: "Problem Solving", description: "Analytical thinking and creative solutions" },
-  { name: "Communication", description: "Clear technical and non-technical communication" },
-  { name: "Team Collaboration", description: "Effective teamwork and cross-functional collaboration" },
-  { name: "Time Management", description: "Efficient task prioritization and deadline management" },
-  { name: "Adaptability", description: "Quick learning and adapting to new technologies" },
-  // { name: "Leadership", description: "Mentoring and guiding team members" },
-  { name: "Attention to Detail", description: "Thorough code review and quality assurance" },
-  { name: "Continuous Learning", description: "Staying updated with industry trends and best practices" }
+  { name: "Problem Solving", description: "Analytical thinking and practical solutions for production issues." },
+  { name: "Communication", description: "Clear collaboration with technical and non-technical stakeholders." },
+  { name: "Team Collaboration", description: "Strong teamwork in Agile/Scrum development environments." },
+  { name: "Code Quality", description: "Focus on maintainable code, code review, and testing discipline." },
+  { name: "Adaptability", description: "Fast learning and smooth transitions across tools and stacks." },
+  { name: "Delivery Focus", description: "Consistent on-time delivery in sprint-based workflows." },
 ];
 
