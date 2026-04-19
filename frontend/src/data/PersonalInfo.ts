@@ -5,7 +5,7 @@ export const PersonalInfo: PersonalInfoType = {
     role: "Full-stack Developer",
     description:
         "I build fast, accessible, scalable applications with strong real-time features.",
-    email: "sugamghising04@example.com",
+    email: "ghisingsugam04@gmail.com",
     github: "https://github.com/sugamghising",
     linkedin: "https://www.linkedin.com/in/sugamghising",
 };

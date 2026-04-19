@@ -18,7 +18,7 @@ const Header = () => {
     const ctx = useTheme();
     theme = ctx.theme;
     toggleFn = ctx.toggle;
-  } catch (e) {
+  } catch {
     // provider not present; fallback handled below
   }
 
@@ -63,8 +63,9 @@ const Header = () => {
               e.preventDefault();
               scrollToSection("contact");
             }}
+            className="text-sm hover:text-primary transition-colors font-medium"
           >
-            <Button size="sm">Contact</Button>
+            Contact
           </a>
 
           {/* Theme toggle */}
@@ -81,7 +82,9 @@ const Header = () => {
               try {
                 const isDark = root.classList.contains("dark");
                 localStorage.setItem("theme", isDark ? "dark" : "light");
-              } catch {}
+              } catch {
+                // Ignore localStorage failures in restricted environments.
+              }
             }}
           >
             <ThemeIcon theme={theme} />
