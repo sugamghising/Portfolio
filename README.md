@@ -25,3 +25,24 @@ Build for production
 cd frontend
 npm run build
 ```
+
+EmailJS contact form setup
+
+1. Create a local env file from the example:
+
+```powershell
+cd frontend
+Copy-Item .env.example .env.local
+```
+
+2. Fill in EmailJS values in `.env.local`:
+	- `VITE_EMAILJS_SERVICE_ID`
+	- `VITE_EMAILJS_TEMPLATE_ID`
+	- `VITE_EMAILJS_PUBLIC_KEY`
+
+3. Configure your EmailJS template variables to match the contact form payload:
+	- `from_name`
+	- `from_email`
+	- `reply_to`
+	- `message`
+	- `to_email`

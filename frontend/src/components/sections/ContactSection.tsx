@@ -5,33 +5,109 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
 import { Github, Mail, MessageCircle } from "lucide-react";
+import emailjs from "@emailjs/browser";
+
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID as
+  | string
+  | undefined;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as
+  | string
+  | undefined;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as
+  | string
+  | undefined;
+
+const EMAILJS_READY =
+  !!EMAILJS_SERVICE_ID && !!EMAILJS_TEMPLATE_ID && !!EMAILJS_PUBLIC_KEY;
+
+const getEmailJSErrorMessage = (error: unknown) => {
+  if (typeof error === "string") return error;
+  if (error && typeof error === "object") {
+    const maybeStatus =
+      "status" in error && error.status != null ? String(error.status) : "";
+    const maybeText =
+      "text" in error && error.text != null ? String(error.text) : "";
+    const maybeMessage =
+      "message" in error && error.message != null
+        ? String(error.message)
+        : "";
+
+    const detail = maybeText || maybeMessage;
+    if (maybeStatus && detail) return `${maybeStatus}: ${detail}`;
+    if (detail) return detail;
+    if (maybeStatus) return `status ${maybeStatus}`;
+  }
+  return "Unknown EmailJS error";
+};
 
 const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitState, setSubmitState] = useState<"idle" | "success" | "error">(
+    "idle"
+  );
+  const [submitMessage, setSubmitMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitState("idle");
+    setSubmitMessage("");
 
     const form = e.target as HTMLFormElement;
     const name = (form.elements.namedItem("name") as HTMLInputElement).value;
     const message = (form.elements.namedItem("message") as HTMLInputElement)
       .value;
-    const email =
+    const rawEmail =
       (form.elements.namedItem("email") as HTMLInputElement)?.value || "";
+    const email = rawEmail.trim();
+    const senderEmail = email || "Not provided";
 
-    const subject = encodeURIComponent(`Message from ${name}`);
-    const body = encodeURIComponent(
-      `${message}${email ? `\n\nContact: ${email}` : ""}`
-    );
-
-    window.location.href = `mailto:${PersonalInfo.email}?subject=${subject}&body=${body}`;
-
-    // Reset form after a short delay
-    setTimeout(() => {
-      form.reset();
+    if (!EMAILJS_READY) {
+      setSubmitState("error");
+      setSubmitMessage(
+        "Contact form is not configured yet. Please set EmailJS environment variables and restart dev server."
+      );
       setIsSubmitting(false);
-    }, 500);
+      return;
+    }
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          // Recipient should always be the portfolio owner's email.
+          to_email: PersonalInfo.email,
+          to_name: PersonalInfo.name,
+
+          // Sender details from the form.
+          from_name: name,
+          from_email: email || "no-reply@example.com",
+          sender_email: senderEmail,
+          reply_to: email || PersonalInfo.email,
+          message,
+
+          // Backward compatibility for templates that still use {{email}}.
+          email: PersonalInfo.email,
+        },
+        {
+          publicKey: EMAILJS_PUBLIC_KEY,
+        }
+      );
+
+      form.reset();
+      setSubmitState("success");
+      setSubmitMessage("Message sent successfully. I will get back to you soon.");
+    } catch (error) {
+      const errorDetail = getEmailJSErrorMessage(error);
+      console.error("EmailJS send failed:", error);
+      setSubmitState("error");
+      setSubmitMessage(
+        `Failed to send the message (${errorDetail}).`
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -131,6 +207,19 @@ const ContactSection = () => {
             >
               {isSubmitting ? "Sending..." : "Send"}
             </Button>
+
+            {submitState !== "idle" && (
+              <p
+                aria-live="polite"
+                className={
+                  submitState === "success"
+                    ? "text-sm text-green-600"
+                    : "text-sm text-red-600"
+                }
+              >
+                {submitMessage}
+              </p>
+            )}
           </form>
         </div>
       </div>
