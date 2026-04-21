@@ -1,5 +1,5 @@
 import { PersonalInfo } from "@/data/PersonalInfo";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Globe, Linkedin, Mail } from "lucide-react";
 
 const SocialLinks = () => {
   return (
@@ -31,6 +31,17 @@ const SocialLinks = () => {
       >
         <Mail className="w-5 h-5" />
       </a>
+      {PersonalInfo.website && (
+        <a
+          href={PersonalInfo.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Portfolio website"
+          className="p-2 rounded-full hover:bg-accent transition-colors duration-200 hover:scale-110 transform"
+        >
+          <Globe className="w-5 h-5" />
+        </a>
+      )}
     </div>
   );
 };

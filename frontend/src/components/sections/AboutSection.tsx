@@ -1,11 +1,12 @@
 import SectionTitle from "../common/SectionTitle";
-import { bio, skills, education, softSkills } from "@/data/about";
+import { bio, skills, education, softSkills, workExperience } from "@/data/about";
 import SkillBar from "../about/SkillBar";
 import EducationCard from "../about/EducationCard";
+import ExperienceTimeline from "../about/ExperienceTimeline";
 // import CertificationCard from "../about/CertificationCard";
 import { Card, CardContent } from "../ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
-import { User, GraduationCap, Code, Heart } from "lucide-react";
+import { User, GraduationCap, Briefcase, Code, Heart } from "lucide-react";
 
 const AboutSection = () => {
   const skillCategories = {
@@ -59,6 +60,17 @@ const AboutSection = () => {
         </div>
       </div>
 
+      {/* Experience */}
+      {workExperience.length > 0 && (
+        <div className="mb-12">
+          <div className="flex items-center gap-2 mb-6">
+            <Briefcase className="w-6 h-6 text-primary" />
+            <h3 className="text-2xl font-semibold">Experience</h3>
+          </div>
+          <ExperienceTimeline experiences={workExperience} />
+        </div>
+      )}
+
       {/* Skills Section */}
       <div className="mb-12">
         <div className="flex items-center gap-2 mb-6">
@@ -67,11 +79,11 @@ const AboutSection = () => {
         </div>
 
         <Tabs defaultValue="frontend" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-6">
+          <TabsList className="grid w-full grid-cols-4 mb-6">
             <TabsTrigger value="frontend">Frontend</TabsTrigger>
             <TabsTrigger value="backend">Backend</TabsTrigger>
             <TabsTrigger value="database">Database</TabsTrigger>
-            {/* <TabsTrigger value="tools">Tools</TabsTrigger> */}
+            <TabsTrigger value="tools">Tools</TabsTrigger>
           </TabsList>
 
           <TabsContent value="frontend" className="space-y-4">
