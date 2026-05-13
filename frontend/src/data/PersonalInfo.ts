@@ -2,9 +2,9 @@ import type { PersonalInfo as PersonalInfoType } from "@/types";
 
 export const PersonalInfo: PersonalInfoType = {
     name: "Sugam Ghising",
-    role: "Backend-focused Fullstack Developer",
+    role: "Full Stack Developer | React, TypeScript, Node.js, Prisma",
     description:
-        "Backend-focused developer building production-ready REST APIs, microservices, and full-stack web apps with Node.js, TypeScript, and PostgreSQL.",
+        "Full Stack Developer specializing in React, TypeScript, Node.js, Express, Prisma, and scalable web applications.",
     email: "ghisingsugam04@gmail.com",
     phone: "+977-9863440510",
     website: "https://sugamghising.com.np",

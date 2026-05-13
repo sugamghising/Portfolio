@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sugamghising.com.np/sitemap.xml

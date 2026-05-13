@@ -137,7 +137,27 @@
   
   /* Improve focus visibility for accessibility */
   a:focus-visible,
-  button:focus-visible {
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
     @apply outline-2 outline-offset-2 outline-ring;
   }
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  border-radius: 0.5rem;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.5rem 0.875rem;
+  text-decoration: none;
+}
+
+.skip-link:focus-visible {
+  left: 1rem;
+  top: 1rem;
 }
