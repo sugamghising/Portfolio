@@ -113,11 +113,11 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="py-20 animate-in fade-in slide-in-from-bottom-4 duration-700"
+      className="py-12 animate-in fade-in slide-in-from-bottom-4 duration-700"
     >
       <SectionTitle>Contact Me</SectionTitle>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start border rounded-lg p-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start border bg-card rounded-lg p-6 shadow-sm">
         {/* Left Side - Information */}
         <div className="space-y-6">
           <div>
@@ -208,6 +208,7 @@ const ContactSection = () => {
               name="name"
               placeholder="Your name"
               required
+              disabled={isSubmitting}
               aria-label="Your name"
               className="transition-all focus:ring-2 focus:ring-primary"
             />
@@ -215,12 +216,14 @@ const ContactSection = () => {
               name="email"
               type="email"
               placeholder="Your email (optional)"
+              disabled={isSubmitting}
               aria-label="Your email"
               className="transition-all focus:ring-2 focus:ring-primary"
             />
             <Textarea
               name="message"
               rows={5}
+              disabled={isSubmitting}
               className="border rounded-md p-2 transition-all focus:ring-2 focus:ring-primary"
               placeholder="Your message"
               required

@@ -2,6 +2,10 @@ export interface Project {
   id: string;
   title: string;
   description: string;
+  shortDesc: string; // For card view
+  challenge: string; // What broke or was hard
+  solution: string; // Architecture/trade-offs
+  result: string; // Metrics/impact
   tech: string[];
   repo?: string;
   demo?: string;

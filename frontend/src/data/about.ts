@@ -42,7 +42,7 @@ export const education: Education[] = [
     id: "edu1",
     degree: "Bachelor in Computer Science and Information Technology (BSc. CSIT)",
     institution: "Tribhuvan University, Kathmandu",
-    period: "2022 - 2025",
+    period: "2022 - 2026",
     description:
       "Relevant coursework: Data Structures and Algorithms, Web Development, Operating Systems, OOP, and DBMS.",
   },
@@ -76,7 +76,7 @@ export const workExperience: WorkExperience[] = [
     id: "exp1",
     title: "Backend Developer Intern",
     company: "Geek Tech Solutions",
-    period: "Dec 2025 - Present",
+    period: "Dec 2025 - May 2026",
     description: [
       "Improved POS API response latency by about 25 percent by restructuring backend data handling and removing redundant MySQL queries.",
       "Designed and maintained RESTful endpoints consumed by 10+ daily active users with reliable data delivery and robust error handling.",

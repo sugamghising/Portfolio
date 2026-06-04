@@ -10,8 +10,8 @@ const HeroSection = () => {
         title="Sugam Ghising | Full Stack Developer Portfolio"
         description="Portfolio showcasing React, TypeScript, Node.js, Express, Prisma, and scalable web application projects."
       />
-      <section className="py-20 text-center" id="hero">
-        <h1 className="text-5xl font-bold mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
+      <section className="py-12 text-center" id="hero">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
           {PersonalInfo.name}
         </h1>
         <p className="max-w-2xl mx-auto mb-6 text-xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
