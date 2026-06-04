@@ -35,8 +35,11 @@ const CaseStudy = () => {
         title={`${project.title} | Case Study`}
         description={project.description}
       />
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <Header />
-      <main className="py-12">
+      <main id="main-content" className="py-12">
         <Container>
           <Link
             to="/"

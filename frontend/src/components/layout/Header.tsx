@@ -34,6 +34,21 @@ const Header = () => {
 
   const closeMobile = () => setMobileOpen(false);
 
+  const handleToggleTheme = () => {
+    if (toggleFn) {
+      toggleFn();
+      return;
+    }
+    const root = document.documentElement;
+    root.classList.toggle("dark");
+    try {
+      const isDark = root.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    } catch {
+      // Ignore localStorage failures in restricted environments.
+    }
+  };
+
   return (
     <header className="w-full py-4 border-b bg-background/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
       <nav className="max-w-5xl mx-auto flex items-center justify-between px-4">
@@ -56,20 +71,7 @@ const Header = () => {
             variant="outline"
             size="sm"
             aria-label={themeToggleLabel}
-            onClick={() => {
-              if (toggleFn) {
-                toggleFn();
-                return;
-              }
-              const root = document.documentElement;
-              root.classList.toggle("dark");
-              try {
-                const isDark = root.classList.contains("dark");
-                localStorage.setItem("theme", isDark ? "dark" : "light");
-              } catch {
-                // Ignore localStorage failures in restricted environments.
-              }
-            }}
+            onClick={handleToggleTheme}
           >
             <ThemeIcon theme={theme} />
           </Button>
@@ -81,20 +83,7 @@ const Header = () => {
             variant="outline"
             size="sm"
             aria-label={themeToggleLabel}
-            onClick={() => {
-              if (toggleFn) {
-                toggleFn();
-                return;
-              }
-              const root = document.documentElement;
-              root.classList.toggle("dark");
-              try {
-                const isDark = root.classList.contains("dark");
-                localStorage.setItem("theme", isDark ? "dark" : "light");
-              } catch {
-                // Ignore localStorage failures in restricted environments.
-              }
-            }}
+            onClick={handleToggleTheme}
           >
             <ThemeIcon theme={theme} />
           </Button>

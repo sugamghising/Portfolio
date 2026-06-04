@@ -208,6 +208,7 @@ const ContactSection = () => {
               name="name"
               placeholder="Your name"
               required
+              disabled={isSubmitting}
               aria-label="Your name"
               className="transition-all focus:ring-2 focus:ring-primary"
             />
@@ -215,12 +216,14 @@ const ContactSection = () => {
               name="email"
               type="email"
               placeholder="Your email (optional)"
+              disabled={isSubmitting}
               aria-label="Your email"
               className="transition-all focus:ring-2 focus:ring-primary"
             />
             <Textarea
               name="message"
               rows={5}
+              disabled={isSubmitting}
               className="border rounded-md p-2 transition-all focus:ring-2 focus:ring-primary"
               placeholder="Your message"
               required

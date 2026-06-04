@@ -3,7 +3,7 @@ import type { Project } from "@/types";
 export const projects: Project[] = [
     {
         id: "1",
-        title: "Hotel Management System API",
+        title: "Hotel Management System",
         shortDesc: "Production-ready REST API for a multi-module hotel operations platform.",
         description: "Comprehensive API for hotel operations including reservations, rate plans, and POS.",
         challenge: "Designing a consistent data model across 10+ interconnected modules (Folio, Inventory, Housekeeping) while maintaining strict referential integrity.",
@@ -21,7 +21,7 @@ export const projects: Project[] = [
             "Redis",
             "Swagger/OpenAPI",
         ],
-        repo: "https://github.com/sugamghising",
+        repo: "https://github.com/sugamghising/Hotel-Management-System-Monorepo",
     },
     {
         id: "2",
