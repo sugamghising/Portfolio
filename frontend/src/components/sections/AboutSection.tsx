@@ -3,7 +3,7 @@ import { bio, skills, education, softSkills, workExperience } from "@/data/about
 import EducationCard from "../about/EducationCard";
 import ExperienceTimeline from "../about/ExperienceTimeline";
 import { Card, CardContent } from "../ui/card";
-import { User, GraduationCap, Briefcase, Code, Heart, ShieldCheck } from "lucide-react";
+import { User, GraduationCap, Briefcase, Code2, Heart, ShieldCheck, Globe, Database, Terminal, Wrench } from "lucide-react";
 
 const AboutSection = () => {
   const skillCategories = {
@@ -92,30 +92,50 @@ const AboutSection = () => {
         </Card>
       </div>
 
-      {/* Technical Arsenal - REPLACED TABS */}
+      {/* Technical Arsenal */}
       <div className="mb-12">
-        <div className="flex items-center gap-2 mb-6">
-          <Code className="w-6 h-6 text-primary" />
+        <div className="flex items-center gap-2 mb-8">
+          <Code2 className="w-6 h-6 text-primary" />
           <h3 className="text-2xl font-semibold">Technical Arsenal</h3>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {Object.entries(skillCategories).map(([category, catSkills]) => (
-            <div key={category} className="space-y-4">
-              <h4 className="text-sm font-bold uppercase tracking-wider text-muted-foreground/80">
-                {category}
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {catSkills.map((skill) => (
-                  <span
-                    key={skill.name}
-                    className="px-3 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground border border-border"
-                  >
-                    {skill.name}
-                  </span>
-                ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {Object.entries(skillCategories).map(([category, catSkills], idx) => {
+            const icons: Record<string, typeof Code2> = {
+              Frontend: Globe,
+              Backend: Terminal,
+              Database,
+              Tools: Wrench,
+            };
+            const Icon = icons[category] || Code2;
+            return (
+              <div
+                key={category}
+                className="group relative rounded-xl border bg-card transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 overflow-hidden"
+              >
+                <div className="h-1.5 bg-gradient-to-r from-primary/60 to-primary/20" />
+                <div className="p-4">
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary">
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <h4 className="text-sm font-bold uppercase tracking-wider">
+                      {category}
+                    </h4>
+                  </div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {catSkills.map((skill) => (
+                      <span
+                        key={skill.name}
+                        className="px-2.5 py-1 text-xs font-medium rounded-md bg-secondary text-secondary-foreground border border-border transition-colors duration-200 hover:border-primary/40 hover:bg-primary/5"
+                      >
+                        {skill.name}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
