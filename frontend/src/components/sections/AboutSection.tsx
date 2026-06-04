@@ -126,7 +126,7 @@ const AboutSection = () => {
                     {catSkills.map((skill) => (
                       <span
                         key={skill.name}
-                        className="px-2.5 py-1 text-xs font-medium rounded-md bg-secondary text-secondary-foreground border border-border transition-colors duration-200 hover:border-primary/40 hover:bg-primary/5"
+                        className="px-2.5 py-1 text-xs font-medium rounded-md bg-secondary text-secondary-foreground border border-border transition-colors duration-200 hover:border-primary/40"
                       >
                         {skill.name}
                       </span>
