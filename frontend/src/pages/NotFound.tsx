@@ -8,7 +8,7 @@ const NotFound = () => {
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>
-      <div id="main-content" className="min-h-screen flex items-center justify-center bg-background">
+      <main id="main-content" className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center space-y-6 p-8">
           <div className="text-8xl font-bold text-primary/20 select-none">404</div>
           <h1 className="text-2xl font-semibold">Page not found</h1>
@@ -22,7 +22,7 @@ const NotFound = () => {
             </Link>
           </Button>
         </div>
-      </div>
+      </main>
     </>
   );
 };

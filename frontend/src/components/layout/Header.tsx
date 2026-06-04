@@ -53,7 +53,7 @@ const Header = () => {
     <header className="w-full py-4 border-b bg-background/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
       <nav className="max-w-5xl mx-auto flex items-center justify-between px-4">
         <a
-          href="#hero"
+          href="/#hero"
           className="text-xl font-semibold hover:text-primary transition-colors cursor-pointer"
           aria-label="Go to top"
         >
@@ -63,7 +63,7 @@ const Header = () => {
         {/* Desktop nav */}
         <div className="hidden md:flex gap-4 items-center">
           {navLinks.map(({ href, label }) => (
-            <a key={href} href={href} className="text-sm hover:text-primary transition-colors font-medium">
+            <a key={href} href={`/${href}`} className="text-sm hover:text-primary transition-colors font-medium">
               {label}
             </a>
           ))}
@@ -105,7 +105,7 @@ const Header = () => {
             {navLinks.map(({ href, label }) => (
               <a
                 key={href}
-                href={href}
+                href={`/${href}`}
                 onClick={closeMobile}
                 className="text-sm hover:text-primary transition-colors font-medium"
               >

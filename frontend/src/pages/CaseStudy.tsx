@@ -34,6 +34,7 @@ const CaseStudy = () => {
       <Seo
         title={`${project.title} | Case Study`}
         description={project.description}
+        canonical={`https://sugamghising.com.np/project/${project.id}`}
       />
       <a href="#main-content" className="skip-link">
         Skip to main content

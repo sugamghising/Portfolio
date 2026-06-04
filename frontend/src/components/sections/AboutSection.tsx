@@ -13,6 +13,13 @@ const AboutSection = () => {
     Tools: skills.filter((s) => s.category === "tools"),
   };
 
+  const categoryIcons: Record<string, typeof Code2> = {
+    Frontend: Globe,
+    Backend: Terminal,
+    Database,
+    Tools: Wrench,
+  };
+
   return (
     <section
       id="about"
@@ -98,13 +105,7 @@ const AboutSection = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {Object.entries(skillCategories).map(([category, catSkills]) => {
-            const icons: Record<string, typeof Code2> = {
-              Frontend: Globe,
-              Backend: Terminal,
-              Database,
-              Tools: Wrench,
-            };
-            const Icon = icons[category] || Code2;
+            const Icon = categoryIcons[category] || Code2;
             return (
               <div
                 key={category}
