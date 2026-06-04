@@ -76,18 +76,16 @@ const AboutSection = () => {
         </div>
         <Card className="border">
           <CardContent className="p-6">
-            <p className="text-muted-foreground leading-relaxed">
-              I don't just build features; I architect systems. My approach is rooted in three non-negotiables:
-              <span className="block mt-4 font-medium text-foreground">
-                • Type-Safety as a Shield: Strict TypeScript and Zod validation to eliminate runtime crashes.
-              </span>
-              <span className="block mt-2 font-medium text-foreground">
-                • Performance-First Mindset: Query optimization and strategic caching as a foundation, not an afterthought.
-              </span>
-              <span className="block mt-2 font-medium text-foreground">
-                • Deployability: Containerized environments (Docker) and OpenAPI documentation for reliable, scalable deployments.
-              </span>
-            </p>
+            <div>
+              <p className="font-semibold text-foreground mb-4">
+                I don't just build features; I architect systems. My approach is rooted in three non-negotiables:
+              </p>
+              <ul className="space-y-2 text-muted-foreground list-disc list-inside">
+                <li>Type-Safety as a Shield: Strict TypeScript and Zod validation to eliminate runtime crashes.</li>
+                <li>Performance-First Mindset: Query optimization and strategic caching as a foundation, not an afterthought.</li>
+                <li>Deployability: Containerized environments (Docker) and OpenAPI documentation for reliable, scalable deployments.</li>
+              </ul>
+            </div>
           </CardContent>
         </Card>
       </div>
