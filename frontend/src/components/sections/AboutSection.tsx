@@ -22,7 +22,7 @@ const AboutSection = () => {
 
       {/* Professional Bio */}
       <div className="mb-12">
-        <Card className="border-2">
+        <Card className="border">
           <CardContent className="p-8">
             <div className="flex items-start gap-4 mb-6">
               <div className="p-3 rounded-full bg-primary/10">
@@ -74,7 +74,7 @@ const AboutSection = () => {
           <ShieldCheck className="w-6 h-6 text-primary" />
           <h3 className="text-2xl font-semibold">Engineering Philosophy</h3>
         </div>
-        <Card className="border-2 bg-primary/5">
+        <Card className="border">
           <CardContent className="p-6">
             <p className="text-muted-foreground leading-relaxed">
               I don't just build features; I architect systems. My approach is rooted in three non-negotiables:
