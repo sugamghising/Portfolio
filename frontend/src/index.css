@@ -101,7 +101,7 @@
   --accent: #403B3B;
   --accent-foreground: #F2EEEB;
   --destructive: oklch(0.704 0.191 22.216);
-  --border: rgba(166, 161, 161, 0.3);
+  --border: rgba(166, 161, 161, 0.6);
   --input: rgba(166, 161, 161, 0.2);
   --ring: #736E6E;
   --chart-1: #736E6E;
@@ -115,7 +115,7 @@
   --sidebar-primary-foreground: #F2EEEB;
   --sidebar-accent: #403B3B;
   --sidebar-accent-foreground: #F2EEEB;
-  --sidebar-border: rgba(166, 161, 161, 0.3);
+  --sidebar-border: rgba(166, 161, 161, 0.6);
   --sidebar-ring: #736E6E;
 }
 

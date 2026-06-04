@@ -76,7 +76,7 @@ export const workExperience: WorkExperience[] = [
     id: "exp1",
     title: "Backend Developer Intern",
     company: "Geek Tech Solutions",
-    period: "Dec 2025 - Present",
+    period: "Dec 2025 - May 2026",
     description: [
       "Improved POS API response latency by about 25 percent by restructuring backend data handling and removing redundant MySQL queries.",
       "Designed and maintained RESTful endpoints consumed by 10+ daily active users with reliable data delivery and robust error handling.",

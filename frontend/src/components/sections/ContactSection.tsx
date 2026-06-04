@@ -117,7 +117,7 @@ const ContactSection = () => {
     >
       <SectionTitle>Contact Me</SectionTitle>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start border rounded-lg p-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start border border-border/80 bg-card/60 rounded-lg p-6 shadow-sm">
         {/* Left Side - Information */}
         <div className="space-y-6">
           <div>
