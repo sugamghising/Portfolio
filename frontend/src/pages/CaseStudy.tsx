@@ -36,7 +36,7 @@ const CaseStudy = () => {
         description={project.description}
       />
       <Header />
-      <main className="py-20">
+      <main className="py-12">
         <Container>
           <Link
             to="/"

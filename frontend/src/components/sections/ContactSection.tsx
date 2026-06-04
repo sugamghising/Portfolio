@@ -113,7 +113,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="py-20 animate-in fade-in slide-in-from-bottom-4 duration-700"
+      className="py-12 animate-in fade-in slide-in-from-bottom-4 duration-700"
     >
       <SectionTitle>Contact Me</SectionTitle>
 

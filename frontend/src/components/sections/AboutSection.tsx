@@ -16,12 +16,12 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="py-20 animate-in fade-in slide-in-from-bottom-4 duration-700"
+      className="py-12 animate-in fade-in slide-in-from-bottom-4 duration-700"
     >
       <SectionTitle>About Me</SectionTitle>
 
       {/* Professional Bio */}
-      <div className="mb-12">
+      <div className="mb-8">
         <Card className="border">
           <CardContent className="p-8">
             <div className="flex items-start gap-4 mb-6">
@@ -46,7 +46,7 @@ const AboutSection = () => {
 
       {/* Experience */}
       {workExperience.length > 0 && (
-        <div className="mb-12">
+        <div className="mb-8">
           <div className="flex items-center gap-2 mb-6">
             <Briefcase className="w-6 h-6 text-primary" />
             <h3 className="text-2xl font-semibold">Experience</h3>
@@ -56,7 +56,7 @@ const AboutSection = () => {
       )}
 
       {/* Education */}
-      <div className="mb-12">
+      <div className="mb-8">
         <div className="flex items-center gap-2 mb-6">
           <GraduationCap className="w-6 h-6 text-primary" />
           <h3 className="text-2xl font-semibold">Education</h3>
@@ -69,7 +69,7 @@ const AboutSection = () => {
       </div>
 
       {/* Engineering Philosophy - NEW */}
-      <div className="mb-12">
+      <div className="mb-8">
         <div className="flex items-center gap-2 mb-6">
           <ShieldCheck className="w-6 h-6 text-primary" />
           <h3 className="text-2xl font-semibold">Engineering Philosophy</h3>
@@ -93,7 +93,7 @@ const AboutSection = () => {
       </div>
 
       {/* Technical Arsenal */}
-      <div className="mb-12">
+      <div className="mb-8">
         <div className="flex items-center gap-2 mb-8">
           <Code2 className="w-6 h-6 text-primary" />
           <h3 className="text-2xl font-semibold">Technical Arsenal</h3>
@@ -140,7 +140,7 @@ const AboutSection = () => {
       </div>
 
       {/* Soft Skills */}
-      <div className="mb-12">
+      <div className="mb-8">
         <div className="flex items-center gap-2 mb-6">
           <Heart className="w-6 h-6 text-primary" />
           <h3 className="text-2xl font-semibold">Soft Skills</h3>
