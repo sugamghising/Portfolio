@@ -58,7 +58,7 @@ const CaseStudy = () => {
                 </span>
               ))}
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-4 flex-wrap">
               {project.repo && (
                 <Button asChild variant="outline" size="sm">
                   <a href={project.repo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">

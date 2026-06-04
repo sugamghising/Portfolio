@@ -99,7 +99,7 @@ const AboutSection = () => {
           <h3 className="text-2xl font-semibold">Technical Arsenal</h3>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {Object.entries(skillCategories).map(([category, catSkills], idx) => {
+          {Object.entries(skillCategories).map(([category, catSkills]) => {
             const icons: Record<string, typeof Code2> = {
               Frontend: Globe,
               Backend: Terminal,
